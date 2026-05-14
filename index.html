@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>RL Mage Battle</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>⚔️ RL Битва Магов ⚔️</h1>
+
+    <div class="buttons">
+        <a href="/train">
+            <button>🔁 Переобучить агента</button>
+        </a>
+
+        <a href="/battle">
+            <button>🎬 Запустить бой</button>
+        </a>
+
+        <button onclick="location.reload()">
+            🔄 Обновить страницу
+        </button>
+
+        <button onclick="window.close()">
+            ❌ Закрыть окно
+        </button>
+    </div>
+
+    <div class="section">
+        <h2>📊 График обучения</h2>
+
+        {% if graph_exists %}
+            <img src="/static/training_progress.png" class="graph">
+        {% else %}
+            <p>График пока отсутствует</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>🎥 Демонстрация боя</h2>
+
+        {% if gif_exists %}
+            <img src="/static/battle.gif" class="battle-gif">
+        {% else %}
+            <p>GIF боя пока отсутствует</p>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
