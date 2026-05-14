@@ -1,0 +1,18 @@
+mage_battle/
+│
+├── agent.py
+├── env.py
+├── train.py
+├── visual_demo.py
+├── app.py
+├── q_table.pkl
+│
+├── static/
+│   ├── battle.gif
+│   ├── training_progress.png
+│   └── style.css
+│
+├── templates/
+│   └── index.html
+│
+└── requirements.txt
